@@ -1,0 +1,360 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    min-width: 320px;
+    max-width: 540px;
+    width: 100%;
+    /* background-color: #bbb; */
+    widows: 100%;
+    height: 44px;
+    min-height: 44px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-left{
+    position: relative;
+    /* background-color: #bbb; */
+    flex: 1;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    background-color: white;
+    margin: 7px 0px 7px 10px;
+    padding-left: 27px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.header-left::before{
+    position:absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    /* border: 2px solid red; */
+    left: 7px;
+    top: 7px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+
+.header-right{
+    /* background-color: #bbb; */
+    width:44px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color:  #2eaae0;
+}
+
+.header-right>a::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    display:block;
+    margin: 2px auto 0px;
+}
+
+.focus {
+    margin-top: 44px;
+}
+
+.focus>img {
+    width: 100%;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+}
+
+.local-nav {
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    margin: 2px 5px;
+    display: flex;
+}
+
+.local-nav-item{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+.local-nav .local-nav-item [class^="local-nav-item-image"] {
+    width: 32px;
+    height: 32px;
+    background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+    background-size: 32px auto;
+
+    /* border: 1px solid red; */
+}
+
+/* 必须要有 ".local-nav .local-nav-item", 因为权重问题 */
+.local-nav .local-nav-item .local-nav-item-image2{
+    background-position: 0px -32px;
+}
+
+.local-nav .local-nav-item .local-nav-item-image3{
+    background-position: 0px -64px;
+}
+
+.local-nav .local-nav-item .local-nav-item-image4{
+    background-position: 0px -96px;
+}
+
+.local-nav .local-nav-item .local-nav-item-image5{
+    background-position: 0px -128px;
+}
+
+.nav {
+    margin: 4px 4px;
+    color: white;
+}
+
+.nav-row {
+    display: flex;
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D); 
+}
+
+.nav-row .nav-column {
+    flex: 1;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border: 1px solid red; */
+}
+
+.nav-row .nav-column > a{
+    flex: 1;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0px 0px #eee;
+
+    /* border: 1px solid blue; */
+}
+
+.nav-row .nav-column > span {
+    margin-bottom: 30px;
+}
+
+.nav-row .nav-column > a:nth-child(1) {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.nav-row .nav-column > a:nth-child(2) {
+    border-right: 1px solid white;
+}
+
+.nav-column:nth-child(1){
+    border-right: 1px solid white;
+    background: url(../images/hotel.png) no-repeat bottom;
+    background-size: 121px auto;
+}
+
+.nav-row:nth-child(1){
+    border-radius:5px 5px 0px 0px;
+    margin-bottom:  1px;
+}
+
+.nav-row:nth-child(2){
+    margin-bottom:  1px;
+}
+
+.nav-row:nth-child(3){
+    border-radius:0px 0px 5px 5px;
+}
+
+.subnav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 4px 4px;
+    border-radius: 4px;
+}
+
+.subnav-item{
+    display: flex;
+    flex-direction: column;
+    flex: 20%; /*父元素必须设 flex-wrap: wrap*/
+    align-items: center;
+    margin: 4px 0px;
+
+    /* border: 1px solid red; */
+}
+
+.subnav-item .subnav-image1{
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+
+.subnav-test {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.subnav-item-test{
+    display: flex;
+    flex-direction: column;
+
+    /* 父元素必须设 flex-wrap: wrap */
+    /* flex: 10%;  */
+
+    /* border: 1px solid red; */
+}
+
+.subnav-item-test:nth-child(1){
+    flex:1;
+}
+.subnav-item-test:nth-child(2){
+    flex:1;
+}
+.subnav-item-test:nth-child(3){
+    flex:1;
+}
+.subnav-item-test:nth-child(4){
+    flex:3;
+}
+
+.subnav-item-test .subnav-image1{
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+
+/* :nth-child(n)
+:nth-child(even)
+:nth-child(odd)
+:nth-child(an+b)
+:nth-child(-an+b)
+[class^="local-nav-item-image"] 
+text-indent: -999px;
+*/
+
+.sales-box-head {
+    position: relative;
+    height: 44px;
+    background-color: white;
+    margin: 0px 4px 2px;
+    border-radius: 4px 4px 0px 0px;
+
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.sales-box-head > h2 {
+    position: relative; 
+    text-indent: -999px;
+    overflow: hidden; 
+
+    height: 44px;
+    /* border: 1px solid red; */
+}
+
+.sales-box-head > h2::before {
+    content: "";
+    background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+    background-size: 32px auto;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+}
+
+.sales-box-head > h2::after {
+    content: "";
+    background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+    background-size: 32px auto;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+}
+
+.sales-box-head > span {
+    position: absolute;
+    left : 100px;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+
+    /* border: 1px solid red; */
+}
+
+.sales-box-head > a {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: pink;
+    padding: 2px 22px 2px 10px;
+    border-radius: 10px;
+}
+
+.sales-box-head >a::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.sales-box-body-row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px 4px;
+}
+
+.sales-box-body-row img {
+    flex:1;
+    width:100px;
+}
+
+.sales-box-body-row {
+    border-bottom: 1px solid #eee;
+}
+
+.sales-box-body-row>img:nth-child(1){
+    border-right: 1px solid #eee;
+}
